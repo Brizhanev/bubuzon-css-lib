@@ -1,0 +1,19 @@
+.button {
+  display: inline-block;
+  border: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(0,123,255,.25);
+  }
+}
+
+@import '_left/button_left.scss';
+@import '_right/button_right.scss';
+@import '_success/button_success.scss';
+@import '_s/button_s.scss';

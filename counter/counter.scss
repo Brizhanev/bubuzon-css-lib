@@ -1,0 +1,10 @@
+@import '__dec/counter__dec.scss';
+@import '__inc/counter__inc.scss';
+@import '__input/counter__input.scss';
+
+.counter {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
