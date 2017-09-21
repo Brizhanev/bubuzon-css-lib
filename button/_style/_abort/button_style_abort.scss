@@ -1,0 +1,21 @@
+.button_style_abort {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+
+  &:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+
+  }
+  &:active {
+    background-color: #c82333;
+    background-image: none;
+    border-color: #bd2130;
+
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(220,53,69,.5);
+  }
+}

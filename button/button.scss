@@ -7,13 +7,34 @@
   border-radius: 0.25rem;
   border: 1px solid transparent;
   vertical-align: middle;
+  color: #111;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+
+  &:active {
+    background-color: #e2e6ea;
+    background-image: none;
+    border-color: #dae0e5;
+
+  }
+
   &:focus {
     outline: 0;
-    box-shadow: 0 0 0 3px rgba(0,123,255,.25);
+    box-shadow: 0 0 0 3px rgba(248,249,250,.5);
+  }
+  &:hover {
+    color: #111;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+
   }
 }
 
 @import '_left/button_left.scss';
 @import '_right/button_right.scss';
-@import '_success/button_success.scss';
-@import '_s/button_s.scss';
+@import '_style/_success/button_style_success.scss';
+@import '_style/_abort/button_style_abort.scss';
+@import '_size/_s/button_size_s.scss';
+@import '_size/_m/button_size_m.scss';
+@import '_size/_l/button_size_l.scss';
+@import '_size/_xl/button_size_xl.scss';
