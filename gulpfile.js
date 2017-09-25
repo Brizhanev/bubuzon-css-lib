@@ -16,34 +16,26 @@ reload = browserSync.reload;
 
 var path = {
 	build: {
-		html: 'build/',
-		js: 'build/js/',
-		css: './',
-		img: 'build/img/',
-		fonts: 'build/fonts/'
+		html: './styleguides/build/',
+		js: './styleguides/build/',
+		css: './styleguides/build/'
 	},
 	src: {
-		html: 'src/*.html',
-		js: 'src/js/main.js',
-		style: 'strongdev-lib.scss',
-		img: ['src/img/**/*.*', 'bower_components/jquery-ui/themes/blitzer/images/*.*'],
-		fonts: 'src/fonts/**/*.*'
+		html: './styleguides/src/**/*.html',
+		js: './bubuzon-lib.js',
+		style: './bubuzon-lib.scss'
 	},
 	watch: {
-		html: 'src/**/*.html',
-		js: 'src/js/**/*.js',
-		style: 'src/style/**/*.scss',
-    libscss: '../library.blocks/**/*.scss',
-    libjs: '../library.blocks/**/*.js',
-		img: 'src/img/**/*.*',
-		fonts: 'src/fonts/**/*.*'
+		html: './styleguides/src/**/*.html',
+		js: './**/*.js',
+		style: './**/*.scss'
 	},
-	clean: './build'
+	clean: './dist'
 };
 
 var config = {
 	server: {
-		baseDir: './build'
+		baseDir: './styleguides/build/'
 	},
 	//tunnel: true,
 	host: 'localhost',
@@ -79,29 +71,10 @@ gulp.task('style:build', function () {
         .pipe(reload({stream: true}));
       });
 
-gulp.task('image:build', function () {
-    gulp.src(path.src.img) //Выберем наши картинки
-        .pipe(imagemin({ //Сожмем их
-        	progressive: true,
-        	svgoPlugins: [{removeViewBox: false}],
-        	use: [pngquant()],
-        	interlaced: true
-        }))
-        .pipe(gulp.dest(path.build.img)) //И бросим в build
-        .pipe(reload({stream: true}));
-      });
-
-gulp.task('fonts:build', function() {
-	gulp.src(path.src.fonts)
-	.pipe(gulp.dest(path.build.fonts))
-});
-
 gulp.task('build', [
 	'html:build',
 	'js:build',
-	'style:build',
-	'fonts:build',
-	'image:build'
+	'style:build'
 	]);
 
 gulp.task('watch', function(){
@@ -111,20 +84,8 @@ gulp.task('watch', function(){
 	watch([path.watch.style], function(event, cb) {
 		gulp.start('style:build');
 	});
-  watch([path.watch.libscss], function(event, cb) {
-    gulp.start('style:build');
-  });
 	watch([path.watch.js], function(event, cb) {
 		gulp.start('js:build');
-	});
-  watch([path.watch.libjs], function(event, cb) {
-    gulp.start('js:build');
-  });
-	watch([path.watch.img], function(event, cb) {
-		gulp.start('image:build');
-	});
-	watch([path.watch.fonts], function(event, cb) {
-		gulp.start('fonts:build');
 	});
 });
 

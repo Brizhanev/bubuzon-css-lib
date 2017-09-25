@@ -1,0 +1,13 @@
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0.5rem 1rem;
+	margin: 0;
+	list-style: none;
+	position: relative;
+	align-items: center;
+}
+
+@import "__item/menu__item.scss";
+@import "__link/menu__link.scss";
+@import "_style/_light/menu_style_light.scss";
