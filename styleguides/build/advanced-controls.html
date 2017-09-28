@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bubuzon BEM CSS Library</title>
+	<link rel="stylesheet" href="bubuzon-lib.css">
+	<script type="text/javascript" src="dist/bubuzon-lib.js"></script> 
+</head>
+<body>
+	<header>
+		<nav>
+			<ul class="menu menu_style_light">
+				<li class="menu__item">
+					<a class="menu__link" href="custom-controls.html">
+						Простые компоненты		
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="advanced-controls.html">
+						Сложные компоненты	
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#">
+						Составные компоненты	
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#">
+						Элемент меню 1		
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#">
+						Элемент меню 1		
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<h1>Сложные компоненты</h1>
+		<h2>Карточка товаров</h2>
+		<pre>
+&lt;div class=&quot;product-card&quot;&gt;
+	&lt;div class=&quot;product-card__image&quot;&gt;
+		&lt;img src=&quot;http://placehold.it/150x150&quot; class=&quot;image image_responsive&quot;&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;product-card__caption&quot;&gt;
+		&lt;a class=&quot;product-card__title&quot; href=&quot;#&quot;&gt;Наименование товара&lt;/a&gt;
+		&lt;div class=&quot;product-card__price product-card__price_old&quot;&gt;
+			550р.
+		&lt;/div&gt;
+		&lt;div class=&quot;product-card__price product-card__price_new&quot;&gt;
+			330р.
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;product-card__rating&quot;&gt;
+		&lt;i class=&quot;fa fa-star&quot;&gt;&lt;/i&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;button-group&quot;&gt;
+		&lt;button class=&quot;button button_left button_style_abort&quot;&gt;Купить&lt;/button&gt;
+		&lt;button class=&quot;button button_right button_style_success&quot;&gt;В избранное&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+	</pre>
+	<div class="row">
+		<div class="col-sm-3">
+		<div class="product-card">
+			<div class="product-card__image">
+				<img src="http://placehold.it/350x350" class="image image_responsive">
+			</div>
+
+			<div class="product-card__caption">
+				<a class="product-card__title" href="#">Наименование товара</a>
+				<div class="product-card__price product-card__price_old">
+					550р.
+				</div>
+				<div class="product-card__price product-card__price_new">
+					330р.
+				</div>
+			</div>
+			<div class="product-card__rating">
+				<i class="fa fa-star"></i>
+			</div>
+			<div class="button-group">
+				<button class="button button_left button_style_abort">Купить</button>
+				<button class="button button_right button_style_success">В избранное</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="product-card">
+			<div class="product-card__image">
+				<img src="http://placehold.it/350x350" class="image image_responsive">
+			</div>
+
+			<div class="product-card__caption">
+				<a class="product-card__title" href="#">Наименование товара</a>
+				<div class="product-card__price product-card__price_old">
+					550р.
+				</div>
+				<div class="product-card__price product-card__price_new">
+					330р.
+				</div>
+			</div>
+			<div class="product-card__rating">
+				<i class="fa fa-star"></i>
+			</div>
+			<div class="button-group">
+				<button class="button button_left button_style_abort">Купить</button>
+				<button class="button button_right button_style_success">В избранное</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="product-card">
+			<div class="product-card__image">
+				<img src="http://placehold.it/350x350" class="image image_responsive">
+			</div>
+
+			<div class="product-card__caption">
+				<a class="product-card__title" href="#">Наименование товара</a>
+				<div class="product-card__price product-card__price_old">
+					550р.
+				</div>
+				<div class="product-card__price product-card__price_new">
+					330р.
+				</div>
+			</div>
+			<div class="product-card__rating">
+				<i class="fa fa-star"></i>
+			</div>
+			<div class="button-group">
+				<button class="button button_left button_style_abort">Купить</button>
+				<button class="button button_right button_style_success">В избранное</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="product-card">
+			<div class="product-card__image">
+				<img src="http://placehold.it/350x350" class="image image_responsive">
+			</div>
+
+			<div class="product-card__caption">
+				<a class="product-card__title" href="#">Наименование товара</a>
+				<div class="product-card__price product-card__price_old">
+					550р.
+				</div>
+				<div class="product-card__price product-card__price_new">
+					330р.
+				</div>
+			</div>
+			<div class="product-card__rating">
+				<i class="fa fa-star"></i>
+			</div>
+			<div class="button-group">
+				<button class="button button_left button_style_abort">Купить</button>
+				<button class="button button_right button_style_success">В избранное</button>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>
